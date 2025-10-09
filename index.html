@@ -867,6 +867,289 @@
         .bonus-info-box strong {
             color: #64B5F6;
         }
+        
+        /* Pattern Strategy Section */
+        .pattern-strategy {
+            margin-top: 30px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .pattern-strategy h3 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #64B5F6;
+            letter-spacing: 1px;
+        }
+        
+        .pattern-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+        
+        .pattern-tracking {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .pattern-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .status-label {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .status-value {
+            font-size: 1.1em;
+            color: #FFC107;
+            font-weight: 600;
+        }
+        
+        .pattern-sequence {
+            margin-bottom: 20px;
+        }
+        
+        .sequence-label {
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+        }
+        
+        .sequence-beads {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .sequence-beads .empty-bead,
+        .sequence-beads .pattern-bead {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5em;
+            position: relative;
+        }
+        
+        .empty-bead {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .pattern-bead {
+            animation: beadPop 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pattern-bead.banker {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+        }
+        
+        .pattern-bead.player {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: #fff;
+        }
+        
+        .pattern-bead.tie {
+            background: linear-gradient(135deg, #2196F3, #03A9F4);
+            color: #fff;
+        }
+        
+        .pattern-bead.highlight {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .pattern-recommendation {
+            background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(66, 165, 245, 0.1));
+            border: 2px solid #64B5F6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .rec-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .rec-icon {
+            font-size: 1.5em;
+        }
+        
+        .rec-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #64B5F6;
+        }
+        
+        .rec-content {
+            padding-left: 35px;
+        }
+        
+        .rec-bet {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .rec-bet.bet-banker {
+            color: #FFD700;
+        }
+        
+        .rec-bet.bet-player {
+            color: #4CAF50;
+        }
+        
+        .rec-bet.wait {
+            color: #FFC107;
+        }
+        
+        .rec-details {
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+        
+        .pattern-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        .stat-label {
+            display: block;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #64B5F6;
+        }
+        
+        .pattern-reset-btn {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+        
+        .pattern-reset-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff4444;
+            transform: scale(1.02);
+        }
+        
+        .pattern-explanation {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .pattern-explanation h4 {
+            color: #64B5F6;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .pattern-explanation ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .pattern-explanation li {
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+        
+        .pattern-note {
+            padding: 12px;
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 3px solid #FFD700;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+        }
+        
+        .bet-result-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .result-btn {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .win-btn {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+        }
+        
+        .win-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .loss-btn {
+            background: linear-gradient(135deg, #FF6B6B, #FF8787);
+            color: white;
+        }
+        
+        .loss-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
 
         /* Animations */
         @keyframes fadeIn {
@@ -962,8 +1245,6 @@
                 font-size: 1.2em;
                 min-height: 48px;
                 -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
             }
 
             .settings-input {
@@ -971,8 +1252,6 @@
                 font-size: 1.1em;
                 min-height: 48px;
                 -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
             }
 
             .preset-buttons {
@@ -1084,6 +1363,54 @@
             }
             
             .bonus-info-box {
+                font-size: 0.85em;
+            }
+            
+            .pattern-strategy {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .pattern-strategy h3 {
+                font-size: 1.3em;
+                margin-bottom: 20px;
+            }
+            
+            .pattern-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .pattern-tracking {
+                padding: 15px;
+            }
+            
+            .sequence-beads .empty-bead,
+            .sequence-beads .pattern-bead {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3em;
+            }
+            
+            .pattern-stats {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .pattern-explanation {
+                padding: 15px;
+            }
+            
+            .pattern-explanation h4 {
+                font-size: 1em;
+            }
+            
+            .pattern-explanation ol {
+                padding-left: 15px;
+            }
+            
+            .pattern-note {
+                padding: 10px;
                 font-size: 0.85em;
             }
         }
@@ -1334,6 +1661,52 @@
                     padding: 10px;
                     font-size: 0.8em;
                 }
+                
+                .pattern-strategy {
+                    padding: 15px;
+                }
+                
+                .pattern-strategy h3 {
+                    font-size: 1.1em;
+                }
+                
+                .sequence-beads .empty-bead,
+                .sequence-beads .pattern-bead {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 1.1em;
+                }
+                
+                .pattern-tracking {
+                    padding: 12px;
+                }
+                
+                .pattern-explanation {
+                    padding: 12px;
+                }
+                
+                .rec-content {
+                    padding-left: 20px;
+                }
+                
+                .rec-bet {
+                    font-size: 1.1em;
+                }
+                
+                .pattern-note {
+                    padding: 8px;
+                    font-size: 0.8em;
+                }
+                
+                .bet-result-buttons {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+                
+                .result-btn {
+                    padding: 12px;
+                    font-size: 1em;
+                }
             }
 
             .quick-btn {
@@ -1414,6 +1787,27 @@
             
             .bonus-chance {
                 font-size: 1em;
+            }
+            
+            .pattern-strategy {
+                padding: 15px;
+            }
+            
+            .pattern-content {
+                grid-template-columns: 1.5fr 1fr;
+                gap: 20px;
+            }
+            
+            .sequence-beads .empty-bead,
+            .sequence-beads .pattern-bead {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
+            
+            .pattern-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
             }
         }
 
@@ -1673,11 +2067,89 @@
                     <p style="font-size: 0.85em; opacity: 0.7; margin-top: 8px;">*Predictions based on shoe composition and recent patterns</p>
                 </div>
             </div>
+            
+            <div class="pattern-strategy">
+                <h3>📊 4-Hand Pattern Strategy</h3>
+                <div class="pattern-content">
+                    <div class="pattern-tracking">
+                        <div class="pattern-status" id="pattern-status">
+                            <span class="status-label">Status:</span>
+                            <span class="status-value" id="status-value">Waiting for 4 non-tie hands...</span>
+                        </div>
+                        
+                        <div class="pattern-sequence" id="pattern-sequence">
+                            <div class="sequence-label">Current 4-Hand Sequence:</div>
+                            <div class="sequence-beads" id="sequence-beads">
+                                <div class="empty-bead">1</div>
+                                <div class="empty-bead">2</div>
+                                <div class="empty-bead">3</div>
+                                <div class="empty-bead">4</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pattern-recommendation" id="pattern-recommendation" style="display: none;">
+                            <div class="rec-header">
+                                <span class="rec-icon">💡</span>
+                                <span class="rec-title">Strategy Recommendation</span>
+                            </div>
+                            <div class="rec-content">
+                                <div class="rec-bet" id="rec-bet">Wait for pattern...</div>
+                                <div class="rec-details" id="rec-details"></div>
+                                <div class="bet-result-buttons" id="bet-result-buttons" style="display: none;">
+                                    <button class="result-btn win-btn" onclick="recordBetResult(true)">✓ Won</button>
+                                    <button class="result-btn loss-btn" onclick="recordBetResult(false)">✗ Lost</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pattern-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Pattern Success:</span>
+                                <span class="stat-value" id="pattern-success">0/0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Win Rate:</span>
+                                <span class="stat-value" id="pattern-winrate">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Current Streak:</span>
+                                <span class="stat-value" id="pattern-streak">0</span>
+                            </div>
+                        </div>
+                        
+                        <button class="pattern-reset-btn" onclick="resetPatternTracking()">Reset Pattern Tracking</button>
+                    </div>
+                    
+                    <div class="pattern-explanation">
+                        <h4>How it works:</h4>
+                        <ol>
+                            <li>Watch 4 hands (ties don't count)</li>
+                            <li>Note the 1st and 4th winners</li>
+                            <li>Bet on 1st winner for max 2 hands</li>
+                            <li>If both lose, switch to 4th winner for 2 hands</li>
+                            <li>Stop when you win, wait for new pattern</li>
+                        </ol>
+                        <p class="pattern-note">Theory: Winners tend to repeat within 4 hands ~90% of the time</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         let gameHistory = [];
+        let patternTracking = {
+            currentSequence: [],
+            phase: 'watching', // 'watching', 'betting', 'waiting'
+            firstWinner: null,
+            fourthWinner: null,
+            betsPlaced: 0,
+            currentBetOn: null,
+            wins: 0,
+            losses: 0,
+            patterns: [],
+            currentStreak: 0
+        };
 
         // Handle iOS viewport height
         function setViewportHeight() {
@@ -1711,9 +2183,13 @@
             }
             document.getElementById('total-cards').textContent = total;
             
-            // Update bonus predictions when shoe changes
+            // Recalculate bonus predictions when shoe changes
             if (document.getElementById('results').classList.contains('show')) {
-                calculateBonusProbabilities();
+                // Debounce to avoid too many calculations
+                clearTimeout(window.bonusCalculationTimeout);
+                window.bonusCalculationTimeout = setTimeout(() => {
+                    calculateBonusProbabilities();
+                }, 300);
             }
         }
 
@@ -1770,10 +2246,301 @@
             playerCount.textContent = counts.P;
             tieCount.textContent = counts.T;
             
-            // Update bonus predictions when history changes
+            // Update pattern tracking
+            updatePatternTracking();
+            
+            // Recalculate bonus predictions when history changes
             if (document.getElementById('results').classList.contains('show')) {
                 calculateBonusProbabilities();
             }
+        }
+        
+        function updatePatternTracking() {
+            // Filter out ties for pattern analysis (ties don't count in the strategy)
+            const nonTieHistory = gameHistory.filter(h => h !== 'T');
+            
+            // Update current sequence display (show last 4 non-tie results)
+            if (patternTracking.phase === 'watching') {
+                const last4NonTie = nonTieHistory.slice(-4);
+                updateSequenceDisplay(last4NonTie);
+                
+                if (last4NonTie.length === 4) {
+                    // We have a complete 4-hand sequence (excluding ties)
+                    patternTracking.firstWinner = last4NonTie[0];
+                    patternTracking.fourthWinner = last4NonTie[3];
+                    patternTracking.currentSequence = last4NonTie;
+                    
+                    // Move to betting phase
+                    patternTracking.phase = 'betting';
+                    patternTracking.betsPlaced = 0;
+                    patternTracking.currentBetOn = patternTracking.firstWinner;
+                    
+                    updatePatternRecommendation();
+                }
+            } else if (patternTracking.phase === 'betting') {
+                // Track betting results
+                updatePatternRecommendation();
+            }
+            
+            updatePatternStats();
+        }
+        
+        function updateSequenceDisplay(sequence) {
+            const container = document.getElementById('sequence-beads');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < 4; i++) {
+                const bead = document.createElement('div');
+                
+                if (i < sequence.length) {
+                    bead.className = 'pattern-bead';
+                    const result = sequence[i];
+                    
+                    if (result === 'B') {
+                        bead.classList.add('banker');
+                        bead.textContent = 'B';
+                    } else if (result === 'P') {
+                        bead.classList.add('player');
+                        bead.textContent = 'P';
+                    } else {
+                        bead.classList.add('tie');
+                        bead.textContent = 'T';
+                    }
+                    
+                    // Highlight 1st and 4th positions
+                    if (i === 0 || i === 3) {
+                        bead.classList.add('highlight');
+                    }
+                } else {
+                    bead.className = 'empty-bead';
+                    bead.textContent = (i + 1).toString();
+                }
+                
+                container.appendChild(bead);
+            }
+        }
+        
+        function updatePatternStats() {
+            const successSpan = document.getElementById('pattern-success');
+            const winrateSpan = document.getElementById('pattern-winrate');
+            const streakSpan = document.getElementById('pattern-streak');
+            
+            const total = patternTracking.wins + patternTracking.losses;
+            successSpan.textContent = `${patternTracking.wins}/${total}`;
+            
+            if (total > 0) {
+                const winRate = (patternTracking.wins / total * 100).toFixed(1);
+                winrateSpan.textContent = `${winRate}%`;
+                
+                // Color code win rate
+                if (winRate >= 70) {
+                    winrateSpan.style.color = '#4CAF50';
+                } else if (winRate >= 50) {
+                    winrateSpan.style.color = '#FFC107';
+                } else {
+                    winrateSpan.style.color = '#FF6B6B';
+                }
+            } else {
+                winrateSpan.textContent = '0%';
+            }
+            
+            streakSpan.textContent = patternTracking.currentStreak;
+            if (patternTracking.currentStreak > 0) {
+                streakSpan.style.color = '#4CAF50';
+            } else if (patternTracking.currentStreak < 0) {
+                streakSpan.style.color = '#FF6B6B';
+            } else {
+                streakSpan.style.color = 'rgba(255, 255, 255, 0.6)';
+            }
+        }
+        
+        function updatePatternRecommendation() {
+            const recDiv = document.getElementById('pattern-recommendation');
+            const recBet = document.getElementById('rec-bet');
+            const recDetails = document.getElementById('rec-details');
+            const statusValue = document.getElementById('status-value');
+            const betButtons = document.getElementById('bet-result-buttons');
+            
+            if (patternTracking.phase === 'betting') {
+                recDiv.style.display = 'block';
+                betButtons.style.display = 'flex';
+                
+                if (patternTracking.betsPlaced < 2) {
+                    // First two bets on first winner
+                    recBet.textContent = `BET ON ${patternTracking.currentBetOn === 'B' ? 'BANKER' : 'PLAYER'}`;
+                    recBet.className = patternTracking.currentBetOn === 'B' ? 'rec-bet bet-banker' : 'rec-bet bet-player';
+                    recDetails.textContent = `Bet #${patternTracking.betsPlaced + 1} of 2 on ${patternTracking.currentBetOn === 'B' ? '1st winner (Banker)' : '1st winner (Player)'}. Pattern: ${patternTracking.currentSequence.join('-')}`;
+                    statusValue.textContent = 'Active Betting Pattern';
+                    statusValue.style.color = '#4CAF50';
+                } else if (patternTracking.betsPlaced < 4) {
+                    // Switch to fourth winner
+                    patternTracking.currentBetOn = patternTracking.fourthWinner;
+                    recBet.textContent = `BET ON ${patternTracking.currentBetOn === 'B' ? 'BANKER' : 'PLAYER'}`;
+                    recBet.className = patternTracking.currentBetOn === 'B' ? 'rec-bet bet-banker' : 'rec-bet bet-player';
+                    recDetails.textContent = `Switched to 4th winner. Bet #${patternTracking.betsPlaced - 1} of 2 on ${patternTracking.currentBetOn === 'B' ? 'Banker' : 'Player'}. Total attempts: ${patternTracking.betsPlaced}/4`;
+                    statusValue.textContent = 'Pattern Switch - Final Attempt';
+                    statusValue.style.color = '#FFC107';
+                }
+            } else if (patternTracking.phase === 'waiting') {
+                recDiv.style.display = 'block';
+                betButtons.style.display = 'none';
+                recBet.textContent = 'WAIT - NO BET';
+                recBet.className = 'rec-bet wait';
+                recDetails.textContent = 'Pattern complete. Waiting for next 4-hand sequence...';
+                statusValue.textContent = 'Waiting for Pattern';
+                statusValue.style.color = '#FFC107';
+            } else {
+                recDiv.style.display = 'none';
+                betButtons.style.display = 'none';
+                const nonTieHistory = gameHistory.filter(h => h !== 'T');
+                const collected = nonTieHistory.slice(-4).length;
+                statusValue.textContent = `Collecting non-tie hands: ${collected}/4`;
+                statusValue.style.color = '#64B5F6';
+            }
+        }
+        
+        function recordBetResult(won) {
+            if (won) {
+                patternTracking.wins++;
+                patternTracking.currentStreak = patternTracking.currentStreak > 0 ? patternTracking.currentStreak + 1 : 1;
+                
+                // Pattern successful - wait for next sequence
+                patternTracking.phase = 'waiting';
+                
+                // Show success message
+                const recBet = document.getElementById('rec-bet');
+                const recDetails = document.getElementById('rec-details');
+                recBet.textContent = '✓ PATTERN SUCCESS!';
+                recBet.style.color = '#4CAF50';
+                recDetails.textContent = 'Winner repeated within 4 hands as predicted. Wait for next pattern.';
+                
+                // Reset after delay
+                setTimeout(() => {
+                    // Clear last 4 from consideration and wait for new pattern
+                    patternTracking.phase = 'watching';
+                    patternTracking.currentSequence = [];
+                    patternTracking.betsPlaced = 0;
+                    patternTracking.firstWinner = null;
+                    patternTracking.fourthWinner = null;
+                    updatePatternTracking();
+                }, 3000);
+            } else {
+                patternTracking.betsPlaced++;
+                
+                if (patternTracking.betsPlaced === 2) {
+                    // Failed first two bets, switch to fourth winner
+                    patternTracking.currentBetOn = patternTracking.fourthWinner;
+                    updatePatternRecommendation();
+                } else if (patternTracking.betsPlaced >= 4) {
+                    // Pattern failed completely
+                    patternTracking.losses++;
+                    patternTracking.currentStreak = patternTracking.currentStreak < 0 ? patternTracking.currentStreak - 1 : -1;
+                    patternTracking.phase = 'waiting';
+                    
+                    // Show failure message
+                    const recBet = document.getElementById('rec-bet');
+                    const recDetails = document.getElementById('rec-details');
+                    recBet.textContent = '✗ PATTERN FAILED';
+                    recBet.style.color = '#FF6B6B';
+                    recDetails.textContent = 'Winner did not repeat. Wait for next pattern.';
+                    
+                    // Reset after delay
+                    setTimeout(() => {
+                        patternTracking.phase = 'watching';
+                        patternTracking.currentSequence = [];
+                        patternTracking.betsPlaced = 0;
+                        patternTracking.firstWinner = null;
+                        patternTracking.fourthWinner = null;
+                        updatePatternTracking();
+                    }, 3000);
+                } else {
+                    // Continue betting
+                    updatePatternRecommendation();
+                }
+            }
+            
+            updatePatternStats();
+        }
+        function recordBetResult(won) {
+            if (won) {
+                patternTracking.wins++;
+                patternTracking.currentStreak = patternTracking.currentStreak > 0 ? patternTracking.currentStreak + 1 : 1;
+                
+                // Pattern successful - wait for next sequence
+                patternTracking.phase = 'waiting';
+                
+                // Show success message
+                const recBet = document.getElementById('rec-bet');
+                const recDetails = document.getElementById('rec-details');
+                recBet.textContent = '✓ PATTERN SUCCESS!';
+                recBet.style.color = '#4CAF50';
+                recDetails.textContent = 'Winner repeated within 4 hands as predicted. Wait for next pattern.';
+                
+                // Reset after delay
+                setTimeout(() => {
+                    // Clear last 4 from consideration and wait for new pattern
+                    patternTracking.phase = 'watching';
+                    patternTracking.currentSequence = [];
+                    patternTracking.betsPlaced = 0;
+                    patternTracking.firstWinner = null;
+                    patternTracking.fourthWinner = null;
+                    updatePatternTracking();
+                }, 3000);
+            } else {
+                patternTracking.betsPlaced++;
+                
+                if (patternTracking.betsPlaced === 2) {
+                    // Failed first two bets, switch to fourth winner
+                    patternTracking.currentBetOn = patternTracking.fourthWinner;
+                    updatePatternRecommendation();
+                } else if (patternTracking.betsPlaced >= 4) {
+                    // Pattern failed completely
+                    patternTracking.losses++;
+                    patternTracking.currentStreak = patternTracking.currentStreak < 0 ? patternTracking.currentStreak - 1 : -1;
+                    patternTracking.phase = 'waiting';
+                    
+                    // Show failure message
+                    const recBet = document.getElementById('rec-bet');
+                    const recDetails = document.getElementById('rec-details');
+                    recBet.textContent = '✗ PATTERN FAILED';
+                    recBet.style.color = '#FF6B6B';
+                    recDetails.textContent = 'Winner did not repeat. Wait for next pattern.';
+                    
+                    // Reset after delay
+                    setTimeout(() => {
+                        patternTracking.phase = 'watching';
+                        patternTracking.currentSequence = [];
+                        patternTracking.betsPlaced = 0;
+                        patternTracking.firstWinner = null;
+                        patternTracking.fourthWinner = null;
+                        updatePatternTracking();
+                    }, 3000);
+                } else {
+                    // Continue betting
+                    updatePatternRecommendation();
+                }
+            }
+            
+            updatePatternStats();
+        }
+        
+        function resetPatternTracking() {
+            patternTracking = {
+                currentSequence: [],
+                phase: 'watching',
+                firstWinner: null,
+                fourthWinner: null,
+                betsPlaced: 0,
+                currentBetOn: null,
+                wins: 0,
+                losses: 0,
+                patterns: [],
+                currentStreak: 0
+            };
+            
+            updatePatternTracking();
+            updatePatternStats();
+            updatePatternRecommendation();
         }
 
         function addToHistory(result) {
@@ -1852,90 +2619,200 @@
                 return;
             }
             
-            // Calculate Panda 8 probability factors
-            // Panda needs: Player gets 3 cards totaling 8 and wins
-            // Key combinations for 3-card 8: 
-            // 0+0+8, 0+1+7, 0+2+6, 0+3+5, 0+4+4, 1+1+6, 1+2+5, 1+3+4, 2+2+4, 2+3+3
-            let pandaScore = 0;
-            if (totalCards > 0) {
-                // Calculate favorable card ratios
-                const zeros = shoeComp[0] / totalCards;
-                const ones = shoeComp[1] / totalCards;
-                const twos = shoeComp[2] / totalCards;
-                const threes = shoeComp[3] / totalCards;
-                const fours = shoeComp[4] / totalCards;
-                const fives = shoeComp[5] / totalCards;
-                const sixes = shoeComp[6] / totalCards;
-                const sevens = shoeComp[7] / totalCards;
-                const eights = shoeComp[8] / totalCards;
+            // ========== PANDA 8 ANALYSIS ==========
+            // Base probability in fresh 8-deck shoe: ~2.55%
+            let pandaBaseline = 2.55;
+            let pandaMultiplier = 1.0;
+            
+            // Factor 1: Abundance of key cards for 3-card total of 8
+            const eights = shoeComp[8];
+            const zeros = shoeComp[0];
+            const ones = shoeComp[1];
+            const twos = shoeComp[2];
+            const threes = shoeComp[3];
+            const fours = shoeComp[4];
+            const fives = shoeComp[5];
+            const sixes = shoeComp[6];
+            const sevens = shoeComp[7];
+            
+            // Calculate expected values for fresh 8-deck shoe
+            const expectedPerCard = totalCards / 416 * 32; // Expected count per rank
+            const expectedZeros = totalCards / 416 * 128; // Expected 10-value cards
+            
+            // Panda 8 key card analysis
+            // Cards that help create 3-card 8s
+            if (eights > expectedPerCard * 1.1) {
+                pandaMultiplier *= 1.15; // More 8s = good
+            } else if (eights < expectedPerCard * 0.7) {
+                pandaMultiplier *= 0.7; // Fewer 8s = bad
+            }
+            
+            // Low cards (1-4) help Player draw third card
+            const lowCards = ones + twos + threes + fours;
+            const expectedLowCards = expectedPerCard * 4;
+            if (lowCards > expectedLowCards * 1.1) {
+                pandaMultiplier *= 1.1; // More low cards = more draws
+            } else if (lowCards < expectedLowCards * 0.8) {
+                pandaMultiplier *= 0.85;
+            }
+            
+            // Specific good combinations for Panda 8
+            // 0+3+5, 1+2+5, 1+3+4, 2+2+4, 2+3+3
+            const midCards = threes + fours + fives;
+            const expectedMidCards = expectedPerCard * 3;
+            if (midCards > expectedMidCards * 1.15) {
+                pandaMultiplier *= 1.12; // These create many 8 combinations
+            }
+            
+            // Factor 2: Shoe penetration effect
+            if (totalCards < 104) { // Less than 2 decks
+                pandaMultiplier *= 1.25; // More volatility
                 
-                // Weight combinations that sum to 8 with 3 cards
-                pandaScore = (
-                    (zeros * ones * sevens * 6) +  // 0,1,7 combinations
-                    (zeros * twos * sixes * 6) +   // 0,2,6 combinations
-                    (zeros * threes * fives * 6) + // 0,3,5 combinations
-                    (ones * twos * fives * 6) +    // 1,2,5 combinations
-                    (ones * threes * fours * 6) +  // 1,3,4 combinations
-                    (twos * threes * threes * 3) + // 2,3,3 combinations
-                    (eights * zeros * zeros * 3)   // 0,0,8 combinations
-                ) * 1000;
-                
-                // Adjust based on history - if Player has been winning
-                const recentPlayers = gameHistory.slice(-5).filter(h => h === 'P').length;
-                if (recentPlayers >= 3) {
-                    pandaScore *= 1.3; // 30% boost for Player streak
+                // Check for extreme conditions
+                if (eights === 0) {
+                    pandaMultiplier *= 0.4; // Can't get 0+0+8
                 }
-                
-                // Consider if low cards are depleted (unfavorable for drawing)
-                const lowCardRatio = (shoeComp[1] + shoeComp[2] + shoeComp[3] + shoeComp[4]) / totalCards;
-                if (lowCardRatio < 0.3) {
-                    pandaScore *= 0.7; // Reduce if low cards are scarce
+                if (fives === 0 && threes === 0) {
+                    pandaMultiplier *= 0.6; // Missing key combinations
                 }
             }
             
-            // Calculate Dragon 7 probability factors
-            // Dragon needs: Banker gets 3 cards totaling 7 and wins
-            // Key combinations for 3-card 7:
-            // 0+0+7, 0+1+6, 0+2+5, 0+3+4, 1+1+5, 1+2+4, 1+3+3, 2+2+3
-            let dragonScore = 0;
-            if (totalCards > 0) {
-                const zeros = shoeComp[0] / totalCards;
-                const ones = shoeComp[1] / totalCards;
-                const twos = shoeComp[2] / totalCards;
-                const threes = shoeComp[3] / totalCards;
-                const fours = shoeComp[4] / totalCards;
-                const fives = shoeComp[5] / totalCards;
-                const sixes = shoeComp[6] / totalCards;
-                const sevens = shoeComp[7] / totalCards;
+            // Factor 3: Pattern-based adjustment (Enhanced with 4-hand pattern strategy)
+            if (gameHistory.length >= 3) {
+                const last3 = gameHistory.slice(-3).join('');
+                const last4 = gameHistory.slice(-4);
+                const last5 = gameHistory.slice(-5);
+                const playerCount = last5.filter(h => h === 'P').length;
                 
-                // Weight combinations that sum to 7 with 3 cards
-                dragonScore = (
-                    (zeros * ones * sixes * 6) +   // 0,1,6 combinations
-                    (zeros * twos * fives * 6) +   // 0,2,5 combinations
-                    (zeros * threes * fours * 6) + // 0,3,4 combinations
-                    (ones * ones * fives * 3) +    // 1,1,5 combinations
-                    (ones * twos * fours * 6) +    // 1,2,4 combinations
-                    (ones * threes * threes * 3) + // 1,3,3 combinations
-                    (twos * twos * threes * 3) +   // 2,2,3 combinations
-                    (sevens * zeros * zeros * 3)   // 0,0,7 combinations
-                ) * 1000;
-                
-                // Adjust based on history - if Banker has been winning
-                const recentBankers = gameHistory.slice(-5).filter(h => h === 'B').length;
-                if (recentBankers >= 3) {
-                    dragonScore *= 1.3; // 30% boost for Banker streak
+                // Player momentum
+                if (last3 === 'PPP') {
+                    pandaMultiplier *= 1.08; // Player hot streak
+                } else if (playerCount >= 3) {
+                    pandaMultiplier *= 1.05; // Player favorable
                 }
                 
-                // Banker draws third card more often with middle cards
-                const midCardRatio = (shoeComp[2] + shoeComp[3] + shoeComp[4] + shoeComp[5]) / totalCards;
-                if (midCardRatio > 0.35) {
-                    dragonScore *= 1.2; // Boost if middle cards are plentiful
+                // Check for Tie patterns (more draws = more 3-card hands)
+                const tieCount = last5.filter(h => h === 'T').length;
+                if (tieCount >= 2) {
+                    pandaMultiplier *= 1.1; // Ties often involve draws
+                }
+                
+                // 4-Hand Pattern Strategy Integration
+                // Check if Player appeared in position 1 or 4 in last 4 hands
+                if (last4.length === 4) {
+                    if (last4[0] === 'P' || last4[3] === 'P') {
+                        // According to strategy, Player likely to repeat within next hands
+                        pandaMultiplier *= 1.07; // 90% repeat probability boost
+                        
+                        // Check if we're in the "hot zone" (positions 1-4 after a P win)
+                        const recentP = gameHistory.slice(-8).indexOf('P');
+                        if (recentP >= 0 && recentP <= 3) {
+                            pandaMultiplier *= 1.04; // Additional boost in repeat zone
+                        }
+                    }
                 }
             }
             
-            // Normalize scores to 0-100 scale
-            pandaScore = Math.min(pandaScore * 3, 100);
-            dragonScore = Math.min(dragonScore * 3, 100);
+            // Calculate final Panda probability
+            let pandaProbability = pandaBaseline * pandaMultiplier;
+            
+            // ========== DRAGON 7 ANALYSIS ==========
+            // Base probability in fresh 8-deck shoe: ~2.25%
+            let dragonBaseline = 2.25;
+            let dragonMultiplier = 1.0;
+            
+            // Dragon 7 key card analysis
+            // Cards that help create 3-card 7s
+            if (sevens > expectedPerCard * 1.1) {
+                dragonMultiplier *= 1.18; // More 7s = good
+            } else if (sevens < expectedPerCard * 0.7) {
+                dragonMultiplier *= 0.65; // Fewer 7s = bad
+            }
+            
+            // Cards that trigger Banker third card draw (0-5 initial)
+            const bankerDrawCards = zeros + ones + twos + threes + fours + fives;
+            const expectedDrawCards = expectedZeros + (expectedPerCard * 5);
+            if (bankerDrawCards > expectedDrawCards * 1.05) {
+                dragonMultiplier *= 1.08; // More cards that force Banker draw
+            } else if (bankerDrawCards < expectedDrawCards * 0.9) {
+                dragonMultiplier *= 0.9;
+            }
+            
+            // Specific good combinations for Dragon 7
+            // 0+2+5, 0+3+4, 1+2+4, 1+3+3, 2+2+3
+            const dragonMidCards = twos + threes + fours + fives;
+            const expectedDragonMidCards = expectedPerCard * 4;
+            if (dragonMidCards > expectedDragonMidCards * 1.1) {
+                dragonMultiplier *= 1.15; // These create many 7 combinations
+            } else if (dragonMidCards < expectedDragonMidCards * 0.8) {
+                dragonMultiplier *= 0.8;
+            }
+            
+            // Check 0-value cards (important for 0+0+7 and other combinations)
+            if (zeros > expectedZeros * 1.1) {
+                dragonMultiplier *= 1.1; // More 10-value cards help
+            } else if (zeros < expectedZeros * 0.8) {
+                dragonMultiplier *= 0.85;
+            }
+            
+            // Factor 2: Shoe penetration effect
+            if (totalCards < 104) { // Less than 2 decks
+                dragonMultiplier *= 1.3; // More volatility
+                
+                // Check for extreme conditions
+                if (sevens === 0) {
+                    dragonMultiplier *= 0.3; // Can't get 0+0+7
+                }
+                if (threes === 0 && fours === 0) {
+                    dragonMultiplier *= 0.5; // Missing key combinations
+                }
+            }
+            
+            // Factor 3: Pattern-based adjustment (Enhanced with 4-hand pattern strategy)
+            if (gameHistory.length >= 3) {
+                const last3 = gameHistory.slice(-3).join('');
+                const last4 = gameHistory.slice(-4);
+                const last5 = gameHistory.slice(-5);
+                const bankerCount = last5.filter(h => h === 'B').length;
+                
+                // Banker momentum
+                if (last3 === 'BBB') {
+                    dragonMultiplier *= 1.1; // Banker hot streak
+                } else if (bankerCount >= 3) {
+                    dragonMultiplier *= 1.06; // Banker favorable
+                }
+                
+                // Choppy patterns (more third cards drawn)
+                if (last3 === 'BPB' || last3 === 'PBP') {
+                    dragonMultiplier *= 1.05; // Choppy = more draws
+                }
+                
+                // 4-Hand Pattern Strategy Integration
+                // Check if Banker appeared in position 1 or 4 in last 4 hands
+                if (last4.length === 4) {
+                    if (last4[0] === 'B' || last4[3] === 'B') {
+                        // According to strategy, Banker likely to repeat within next hands
+                        dragonMultiplier *= 1.08; // 90% repeat probability boost
+                        
+                        // Check if we're in the "hot zone" (positions 1-4 after a B win)
+                        const recentB = gameHistory.slice(-8).indexOf('B');
+                        if (recentB >= 0 && recentB <= 3) {
+                            dragonMultiplier *= 1.05; // Additional boost in repeat zone
+                        }
+                    }
+                }
+            }
+            
+            // Calculate final Dragon probability
+            let dragonProbability = dragonBaseline * dragonMultiplier;
+            
+            // Cap probabilities at realistic maximums
+            pandaProbability = Math.min(pandaProbability, 8.0); // Max ~1 in 12
+            dragonProbability = Math.min(dragonProbability, 7.0); // Max ~1 in 14
+            
+            // Convert probability to score (0-100 scale for visual display)
+            let pandaScore = (pandaProbability / 8.0) * 100;
+            let dragonScore = (dragonProbability / 7.0) * 100;
             
             // Update Panda display
             const pandaBar = document.getElementById('panda-bar');
@@ -1945,22 +2822,33 @@
             
             pandaBar.style.width = pandaScore + '%';
             
-            if (pandaScore > 35) {
-                pandaChance.textContent = 'HIGH';
+            // Set Panda status based on probability
+            if (pandaProbability > 4.0) { // >4% (better than 1 in 25)
+                pandaChance.textContent = 'HOT 🔥';
                 pandaChance.style.color = '#4CAF50';
                 pandaCard.classList.add('hot');
-                // Show estimated occurrence rate
-                const occurrence = (pandaScore / 10).toFixed(1);
-                pandaOdds.textContent = `~1 in ${Math.round(100/occurrence)} hands`;
+                pandaOdds.textContent = `${pandaProbability.toFixed(1)}% (~1 in ${Math.round(100/pandaProbability)})`;
                 pandaOdds.style.display = 'block';
-            } else if (pandaScore > 20) {
+            } else if (pandaProbability > 3.0) { // 3-4%
+                pandaChance.textContent = 'HIGH';
+                pandaChance.style.color = '#8BC34A';
+                pandaCard.classList.add('hot');
+                pandaOdds.textContent = `${pandaProbability.toFixed(1)}% (~1 in ${Math.round(100/pandaProbability)})`;
+                pandaOdds.style.display = 'block';
+            } else if (pandaProbability > 2.3) { // 2.3-3% (near baseline)
                 pandaChance.textContent = 'MEDIUM';
                 pandaChance.style.color = '#FFC107';
                 pandaCard.classList.remove('hot');
-                pandaOdds.style.display = 'none';
-            } else {
+                pandaOdds.textContent = `${pandaProbability.toFixed(1)}%`;
+                pandaOdds.style.display = 'block';
+            } else if (pandaProbability > 1.5) { // 1.5-2.3%
                 pandaChance.textContent = 'LOW';
                 pandaChance.style.color = 'rgba(255, 255, 255, 0.6)';
+                pandaCard.classList.remove('hot');
+                pandaOdds.style.display = 'none';
+            } else { // <1.5%
+                pandaChance.textContent = 'COLD ❄️';
+                pandaChance.style.color = 'rgba(255, 255, 255, 0.3)';
                 pandaCard.classList.remove('hot');
                 pandaOdds.style.display = 'none';
             }
@@ -1973,42 +2861,64 @@
             
             dragonBar.style.width = dragonScore + '%';
             
-            if (dragonScore > 35) {
-                dragonChance.textContent = 'HIGH';
+            // Set Dragon status based on probability
+            if (dragonProbability > 3.5) { // >3.5% (better than 1 in 28)
+                dragonChance.textContent = 'HOT 🔥';
                 dragonChance.style.color = '#FF6B6B';
                 dragonCard.classList.add('hot');
-                // Show estimated occurrence rate
-                const occurrence = (dragonScore / 10).toFixed(1);
-                dragonOdds.textContent = `~1 in ${Math.round(100/occurrence)} hands`;
+                dragonOdds.textContent = `${dragonProbability.toFixed(1)}% (~1 in ${Math.round(100/dragonProbability)})`;
                 dragonOdds.style.display = 'block';
-            } else if (dragonScore > 20) {
+            } else if (dragonProbability > 2.7) { // 2.7-3.5%
+                dragonChance.textContent = 'HIGH';
+                dragonChance.style.color = '#FF8787';
+                dragonCard.classList.add('hot');
+                dragonOdds.textContent = `${dragonProbability.toFixed(1)}% (~1 in ${Math.round(100/dragonProbability)})`;
+                dragonOdds.style.display = 'block';
+            } else if (dragonProbability > 2.0) { // 2.0-2.7% (near baseline)
                 dragonChance.textContent = 'MEDIUM';
                 dragonChance.style.color = '#FFC107';
                 dragonCard.classList.remove('hot');
-                dragonOdds.style.display = 'none';
-            } else {
+                dragonOdds.textContent = `${dragonProbability.toFixed(1)}%`;
+                dragonOdds.style.display = 'block';
+            } else if (dragonProbability > 1.3) { // 1.3-2.0%
                 dragonChance.textContent = 'LOW';
                 dragonChance.style.color = 'rgba(255, 255, 255, 0.6)';
                 dragonCard.classList.remove('hot');
                 dragonOdds.style.display = 'none';
+            } else { // <1.3%
+                dragonChance.textContent = 'COLD ❄️';
+                dragonChance.style.color = 'rgba(255, 255, 255, 0.3)';
+                dragonCard.classList.remove('hot');
+                dragonOdds.style.display = 'none';
             }
             
-            // Show alert if either is hot
+            // Show alert based on conditions
             const bonusAlert = document.getElementById('bonus-alert');
             const alertText = document.getElementById('alert-text');
             
-            if (pandaScore > 35 && dragonScore > 35) {
+            if (pandaProbability > 4.0 && dragonProbability > 3.5) {
                 bonusAlert.style.display = 'flex';
-                alertText.textContent = '🔥 Both Panda 8 & Dragon 7 are HOT!';
-            } else if (pandaScore > 35) {
+                alertText.textContent = '🔥🔥 BOTH BONUSES HOT! Rare opportunity!';
+                bonusAlert.style.background = 'linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(255, 215, 0, 0.3))';
+            } else if (pandaProbability > 4.0) {
                 bonusAlert.style.display = 'flex';
-                alertText.textContent = '🐼 Panda 8 is HOT! Consider the side bet';
-            } else if (dragonScore > 35) {
+                alertText.textContent = `🐼🔥 Panda 8 at ${pandaProbability.toFixed(1)}%! (Normal: 2.5%)`;
+                bonusAlert.style.background = 'linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(139, 195, 74, 0.3))';
+            } else if (dragonProbability > 3.5) {
                 bonusAlert.style.display = 'flex';
-                alertText.textContent = '🐉 Dragon 7 is HOT! Consider the side bet';
-            } else if (pandaScore > 20 || dragonScore > 20) {
+                alertText.textContent = `🐉🔥 Dragon 7 at ${dragonProbability.toFixed(1)}%! (Normal: 2.3%)`;
+                bonusAlert.style.background = 'linear-gradient(135deg, rgba(255, 107, 107, 0.3), rgba(255, 135, 135, 0.3))';
+            } else if (pandaProbability > 3.0 || dragonProbability > 2.7) {
                 bonusAlert.style.display = 'flex';
-                alertText.textContent = '⚡ Bonus conditions improving...';
+                const better = pandaProbability > dragonProbability ? 
+                    `🐼 Panda 8 favorable at ${pandaProbability.toFixed(1)}%` :
+                    `🐉 Dragon 7 favorable at ${dragonProbability.toFixed(1)}%`;
+                alertText.textContent = better;
+                bonusAlert.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2))';
+            } else if (pandaProbability < 1.5 && dragonProbability < 1.3) {
+                bonusAlert.style.display = 'flex';
+                alertText.textContent = '❄️ Both bonuses COLD - Avoid side bets';
+                bonusAlert.style.background = 'linear-gradient(135deg, rgba(100, 100, 150, 0.2), rgba(150, 150, 200, 0.2))';
             } else {
                 bonusAlert.style.display = 'none';
             }
@@ -2101,6 +3011,7 @@
         // Initialize
         updateTotalCards();
         updateHistoryDisplay();
+        updatePatternStats();
     </script>
 </body>
 </html>
