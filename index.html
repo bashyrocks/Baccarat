@@ -364,6 +364,8 @@
         /* Game History */
         .history-section {
             margin-top: 30px;
+            overflow: hidden;  /* ADD THIS */
+            width: 100%;       /* ADD THIS */
         }
         
         .history-section h3 {
@@ -371,7 +373,7 @@
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-
+        
         .history-input-group {
             display: flex;
             gap: 10px;
@@ -379,10 +381,10 @@
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
-
+        
         .history-input {
             flex: 1;
-            min-width: 200px;
+            min-width: 0;      /* CHANGE THIS FROM 200px to 0 */
             padding: 12px;
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.2);
@@ -392,30 +394,31 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all 0.3s ease;
+            box-sizing: border-box;  /* ADD THIS */
         }
-
+        
         .history-input:focus {
             outline: none;
             border-color: #64B5F6;
             background: rgba(100, 181, 246, 0.1);
             box-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
         }
-
+        
         .history-input::placeholder {
             color: rgba(255, 255, 255, 0.3);
             font-size: 0.9em;
             letter-spacing: 1px;
         }
-
+        
         .quick-input-buttons {
             display: flex;
             gap: 8px;
             flex-shrink: 0;
         }
-
+        
         .quick-btn {
-            width: 25px;
-            height: 25px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             border: 2px solid rgba(255, 255, 255, 0.3);
             background: rgba(255, 255, 255, 0.1);
@@ -426,35 +429,35 @@
             font-size: 1.2em;
             flex-shrink: 0;
         }
-
+        
         .quick-btn.banker {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
             border-color: #FFD700;
         }
-
+        
         .quick-btn.player {
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(139, 195, 74, 0.2));
             border-color: #4CAF50;
         }
-
+        
         .quick-btn.tie {
             background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(3, 169, 244, 0.2));
             border-color: #2196F3;
         }
-
+        
         .quick-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
-
+        
         .quick-btn:active {
             transform: scale(0.95);
         }
-
+        
         .history-display {
             margin-top: 20px;
         }
-
+        
         .history-road {
             display: flex;
             gap: 5px;
@@ -462,10 +465,13 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             overflow-x: auto;
+            overflow-y: hidden;    /* ADD THIS */
             min-height: 70px;
             align-items: center;
+            max-width: 100%;        /* ADD THIS */
+            -webkit-overflow-scrolling: touch;  /* ADD THIS for smooth iOS scrolling */
         }
-
+        
         .history-bead {
             width: 50px;
             height: 50px;
@@ -481,15 +487,35 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             animation: beadPop 0.3s ease;
         }
-
+        
         @keyframes beadPop {
             0% { transform: scale(0); }
             60% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
-
+        
         .history-bead.banker-bead {
             background: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+        
+        /* ADD THIS MOBILE-SPECIFIC SECTION */
+        @media (max-width: 480px) {
+            .history-input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .history-input {
+                width: 100%;
+                min-width: 0;
+                max-width: 100%;
+            }
+            
+            .quick-input-buttons {
+                width: 100%;
+                justify-content: center;
+                gap: 15px;
+            }
         }
 
         .history-bead.player-bead {
@@ -2974,6 +3000,7 @@
     </script>
 </body>
 </html>
+
 
 
 
