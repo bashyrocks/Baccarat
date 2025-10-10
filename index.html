@@ -465,11 +465,18 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             overflow-x: auto;
-            overflow-y: hidden;    /* ADD THIS */
+            overflow-y: hidden;
             min-height: 70px;
             align-items: center;
-            max-width: 100%;        /* ADD THIS */
-            -webkit-overflow-scrolling: touch;  /* ADD THIS for smooth iOS scrolling */
+            max-width: calc(100vw - 54px); /* Account for container padding */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .history-display {
+            margin-top: 20px;
+            width: 100%;
+            overflow: hidden;
+            max-width: 100%;
         }
         
         .history-bead {
@@ -3000,6 +3007,7 @@
     </script>
 </body>
 </html>
+
 
 
 
