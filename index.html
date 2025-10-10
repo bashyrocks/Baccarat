@@ -377,10 +377,12 @@
             gap: 10px;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .history-input {
             flex: 1;
+            min-width: 200px;
             padding: 12px;
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.2);
@@ -408,6 +410,7 @@
         .quick-input-buttons {
             display: flex;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .quick-btn {
@@ -421,6 +424,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 1.2em;
+            flex-shrink: 0;
         }
 
         .quick-btn.banker {
@@ -2970,4 +2974,5 @@
     </script>
 </body>
 </html>
+
 
