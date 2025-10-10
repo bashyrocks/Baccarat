@@ -2192,46 +2192,21 @@
         }
 
         function updateHistoryDisplay() {
-            const road = document.getElementById('history-road');
             const bankerCount = document.getElementById('banker-count');
             const playerCount = document.getElementById('player-count');
             const tieCount = document.getElementById('tie-count');
             
             if (gameHistory.length === 0) {
-                road.innerHTML = '<div style="color: rgba(255,255,255,0.3); margin: auto;">No history yet</div>';
                 bankerCount.textContent = '0';
                 playerCount.textContent = '0';
                 tieCount.textContent = '0';
                 return;
             }
             
-            road.innerHTML = '';
             let counts = { B: 0, P: 0, T: 0 };
             
-            gameHistory.forEach((result, index) => {
-                const bead = document.createElement('div');
-                bead.className = 'history-bead';
-                
-                if (result === 'B') {
-                    bead.classList.add('banker-bead');
-                    bead.textContent = 'B';
-                    counts.B++;
-                } else if (result === 'P') {
-                    bead.classList.add('player-bead');
-                    bead.textContent = 'P';
-                    counts.P++;
-                } else {
-                    bead.classList.add('tie-bead');
-                    bead.textContent = 'T';
-                    counts.T++;
-                }
-                
-                const indexBadge = document.createElement('div');
-                indexBadge.className = 'index';
-                indexBadge.textContent = (index + 1).toString();
-                bead.appendChild(indexBadge);
-                
-                road.appendChild(bead);
+            gameHistory.forEach((result) => {
+                counts[result]++;
             });
             
             bankerCount.textContent = counts.B;
@@ -3007,6 +2982,7 @@
     </script>
 </body>
 </html>
+
 
 
 
